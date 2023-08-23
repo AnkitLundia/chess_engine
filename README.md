@@ -8,3 +8,6 @@ NOTES/ Things to resolve/ figure out:
     d. Random Forest
     e. Ensemble methods
  4. Try to put weights on moves based on who won?
+ 5. We can treat the problem as sequence models like in NLP, probabilistic models like in HMM by using the list of only possible moves instead of all moves as the target variable  
+ 6. The corpus to choose moves from should change with every move. The new move should be the one with highest probability in that corpus.
+ 7. Is it possible to code how to evaluate a position?

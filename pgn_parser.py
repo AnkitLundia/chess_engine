@@ -1,9 +1,16 @@
 import re
 
+class moves:
+    board_annotations = []
 def pgnParser(pgn_string):
     pgn_moves = re.sub("\[.*\]\n|[0-9]\.\s|\s\s", '', pgn_string, flags=re.MULTILINE)
     pgn_moves = re.sub("\n", ' ', pgn_moves, flags=re.MULTILINE)
-    print(pgn_moves)
+    pgn_moves = re.sub("\{\[[^\]]*\]\}", ' ', pgn_moves, flags=re.MULTILINE)
+    pgn_moves = re.sub("\d\.+", ' ', pgn_moves, flags=re.MULTILINE)
+    pgn_moves = re.sub(" [0-1]-[0-1] ", '',  pgn_moves, flags=re.MULTILINE)
+    
+    #print(pgn_moves)
+    return pgn_moves
 
 if __name__ == "__main__":
     pgn = '''[Event "Live Chess"]
