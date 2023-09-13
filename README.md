@@ -11,6 +11,9 @@ NOTES/ Things to resolve/ figure out:
  5. We can treat the problem as sequence models like in NLP, probabilistic models like in HMM by using the list of only possible moves instead of all moves as the target variable  
  6. The corpus to choose moves from should change with every move. The new move should be the one with highest probability in that corpus.
  7. Is it possible to code how to evaluate a position?
+ 8. One way to feed the moves is to separate the moves in order into played_by_white and played_by_black columns to create a new dataframe.
+    1. This way we could create two models, one to predict moves by black and other to predict moves by white.
+ 9. 
 
 
  PLAN:
